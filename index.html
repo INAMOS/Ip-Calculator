@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora ip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+  <body style="background-color:whitesmoke">
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Calculadora Ip
+                </h1>
+                <h2 class="subtitle">
+                    Hecho por: <strong>Edward Hurtado y Julmer Rincon</strong>
+                </h2> 
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+
+        <div class="card">
+            <header class="card-header">
+                <p class="card-header-title">
+                    Calculadora
+                </p>
+                      
+            </header>
+            <div class="card-content">
+                           
+                <div class="content">
+
+                    <form id="form" onsubmit="SubRed();">
+
+                        <div class="field">
+                            <label class="label">Direccion Ip</label>
+                            <div class="control">
+                                <!-- <input class="input" pattern="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>-->
+                                <input id="ip" class="input"  type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>
+                         
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Mascara de Red</label>
+                            <div class="control">
+                                    <!-- <input id="mask" class="input" type="text" value="255.255.255.0" required> -->
+                                <input id="mask" class="input" type="text" pattern="(25[0-9])\.(25[0-9])\.(25[0-9])\.[0-9]{1,3}" value="255.255.255.0" required>
+                            </div> 
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Numero de SubRedes</label>
+                                <div class="control">
+                                    <input id="numero" class="input" type="number" value="1" min=1 placeholder="Host" required>
+                                </div>
+                            </div>
+                            
+                            <!-- <div>
+                                <div class="field">
+                                    <label class="label">Numero de Host</label>
+                                    <div class="control">
+                                        <input id="host" class="input" type="number" value="120" min=1 placeholder="Host" required>
+                                    </div>
+                                </div>
+                            </div> -->
+                           
+                        <div class="field">
+                            <button class="button is-primary" >Calcular</button>
+                        </div>
+
+                    </form>
+                                  
+                </div>    
+            </div>
+                   
+        </div>
+
+    </section>
+    <section  class="section">
+        <div id="resultado" class="container" style="display:none">
+            <article class="message is-primary container">
+                    <div class="message-header">
+                    <p>Resultado</p>
+                    <button class="delete" aria-label="delete" onclick="closeBar();"></button>
+                    </div>
+                    <div id="resultados" class="message-body">
+                       
+                        
+                    </div>
+            </article>
+        </div>
+    </section> 
+
+    <script>
+                        
+        function SubRed(){
+
+            let number=document.getElementById('numero').value;
+            let mascara=document.getElementById('mask').value;
+            let ip=document.getElementById('ip').value;
+
+
+            window.location=`subred.html?N=${number}&mascara=${mascara}&ip=${ip}`;
+
+
+        }
+
+    </script>
+     <script src="index.js"></script>
+
+     
+
+  </body>
+</html>
