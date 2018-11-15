@@ -34,14 +34,14 @@
                            
                 <div class="content">
 
-                    <form id="form" onsubmit="SubRed();">
+                    <form id="form" onsubmit="subRed();">
 
                         <div class="field">
                             <label class="label">Direccion Ip</label>
                             <div class="control">
-                                <!-- <input class="input" pattern="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}" type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>-->
-                                <input id="ip" class="input"  type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>
-                         
+                                <input class="input" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}\.[0-9]{1,3}" type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>
+                                <!-- <input id="ip" class="input"  type="text" title="Por favor introduzca una ip valida" value="192.168.1.0" required>
+                          -->
                             </div>
                         </div>
 
@@ -98,7 +98,7 @@
 
     <script>
                         
-        function SubRed(){
+        function subRed(){
 
             let number=document.getElementById('numero').value;
             let mascara=document.getElementById('mask').value;
@@ -112,8 +112,6 @@
 
     </script>
      <script src="index.js"></script>
-
-     
 
   </body>
 </html>
