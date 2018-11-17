@@ -74,13 +74,6 @@ form[0].addEventListener('submit',(event)=>{
  });
 
 
-// const closeBar= ()=>{
-
-//     let bar=document.getElementById('resultado');
-//     bar.style.display="none"
-
-// }
-
                        
                         let hostN=getParam('N');
                         
@@ -94,7 +87,7 @@ form[0].addEventListener('submit',(event)=>{
                             field.classList.add('field');
 
                             field.innerHTML=`
-                                            <label class="label">SubRed ${i+1}</label>
+                                            <label class="label">Host SubRed ${i+1}</label>
                                             <div class="control">
                                                 <input id="host${i+1}" class="input" type="number" value="1" min=1 placeholder="Host" required>
                                             </div>
